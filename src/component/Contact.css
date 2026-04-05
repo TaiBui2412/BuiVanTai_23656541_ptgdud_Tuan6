@@ -1,0 +1,23 @@
+/* src/component/Contact.css */
+/* (giữ phần hiện có) */
+
+.contact-section{ text-align:left; }
+.contact-form input, .contact-form textarea{ width:100%; box-sizing:border-box; }
+.contact-form button.cta-button{ justify-self:start; }
+.contact-meta{ margin-top:18px; }
+
+/* Thêm: responsive grid layout cho form */
+.contact-section{ max-width:760px; margin:0 auto; }
+.contact-form{
+  display:grid;
+  gap:12px;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-form label{ display:flex; flex-direction:column; }
+.contact-form textarea{ grid-column: 1 / -1; }
+
+@media (max-width:640px){
+  .contact-form{ grid-template-columns: 1fr; }
+  .contact-form textarea{ grid-column:auto; }
+  .contact-section{ padding:16px; }
+}

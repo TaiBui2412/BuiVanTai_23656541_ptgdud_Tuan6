@@ -1,0 +1,36 @@
+/* src/component/About.css */
+/* (giữ phần hiện có) */
+
+.about-section h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.team .member {
+  background: linear-gradient(180deg, #fff, #fbfbff);
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.team .member p {
+  margin: 0;
+  color: var(--text-muted, #6b7280);
+}
+
+/* Thêm: responsive flex layout cho team */
+.team{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  margin-top:14px;
+}
+.team .member{
+  flex:1 1 220px;
+  min-width:200px;
+}
+@media (max-width:640px){
+  .about-section{ text-align:center; }
+  .team .member{ width:100%; }
+}

@@ -1,0 +1,106 @@
+/* Page & component-specific styles */
+.page {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero-section,
+.about-section,
+.contact-section {
+  text-align: center;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+}
+
+/* Hero */
+.hero-title {
+  font-size: 2rem;
+  margin: 0 0 8px;
+  color: var(--text-h, #0f172a);
+}
+.lead {
+  color: var(--text-muted, #374151);
+  margin: 0 0 20px;
+}
+
+/* Features/cards */
+.features {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0 24px;
+  flex-wrap: wrap;
+}
+.card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  padding: 16px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.04);
+}
+.card h3, .card h4 { margin: 0 0 8px; }
+
+/* CTA */
+.cta-button {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+}
+
+/* About / team */
+.team {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.team .member { width: 220px; text-align: left; }
+
+/* Contact form */
+.contact-form {
+  max-width: 640px;
+  margin: 16px auto;
+  display: grid;
+  gap: 12px;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-muted, #374151);
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: var(--input-bg, #fff);
+}
+.contact-meta {
+  margin-top: 12px;
+  color: var(--text-muted, #6b7280);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .features, .team { gap: 12px; }
+  .card, .team .member { width: 100%; }
+  .page { padding: 20px 12px; }
+}
