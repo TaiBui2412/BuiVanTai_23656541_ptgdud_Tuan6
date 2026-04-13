@@ -1,15 +1,24 @@
-import React from 'react'
-import Item from './Item'
-import "./Product.css"
+import React from "react";
+import Item from "./Item";
+import { Link } from "react-router-dom";
+import "./Product.css";
 const Product = () => {
   return (
     <div className="product-page">
-        <h1>Product Page</h1>
-        <Item id={1} name="Samsung" ></Item>
-        <Item id={2} name="iPhone" ></Item>
-        <Item id={3} name="Sony" ></Item>
+      <h2>Danh sách sản phẩm</h2>
+      <ul>
+        <li>
+          <Link to="/product/1">Samsung</Link>
+        </li>
+        <li>
+          <Link to="/product/2">iPhone</Link>
+        </li>
+        <li>
+          <Link to="/product/3">Sony</Link>
+        </li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

@@ -1,12 +1,14 @@
-import React from 'react'
-import './Item.css'
-const Item = ({id,name}) => {
+import React from "react";
+import "./Item.css";
+import { useParams } from "react-router-dom";
+const Item = () => {
+  const { id } = useParams();
   return (
     <div className="item-card">
-        <h2>{name}</h2>
-        <p>ID: {id}</p>
+      <h2>xxx</h2>
+      <p>ID: {id}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
